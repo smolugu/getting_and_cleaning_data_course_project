@@ -22,18 +22,19 @@ write.csv(xtext_all_data, file = "xcsv_all_data.csv")
 feature_text <- read.table("features.txt", sep = "", header = FALSE, fill = TRUE)
 feature_text$V2 <- as.character(feature_text$V2)
 
-##naming the columns of the merged data
+        ##naming the columns of the merged data
 names(xtext_all_data) <- c("subject-id", "activity-id",feature_text$V2)
 
-##creating a subset of mean and SD's by matcing phrases (mean() and sd()) in column names
+        ##creating a subset of mean and SD's by matcing phrases (mean() and sd()) in column names
 xtext_mean_std <- xtext_all_data[, grepl("mean()", colnames(xtext_all_data), fixed = TRUE) | grepl("std()", colnames(xtext_all_data), fixed = TRUE)]
 
-## readding the subject_id and activity_id columns
+        ## readding the subject_id and activity_id columns
 xtext_mean_std <- cbind(xtext_all_data[,1], xtext_all_data[,2], xtext_mean_std)
 
-## making column names valid as per R convention
+        ## making column names valid as per R convention
 names(xtext_mean_std) <- make.names(names(xtext_mean_std), unique = TRUE, allow_ = TRUE)
-## renaming 1st and 2nd columns with subject.id and activity.id respectively
+
+        ## renaming 1st and 2nd columns with subject.id and activity.id respectively
 xtext_mean_std <- rename(xtext_mean_std, subject.id = xtext_all_data...1., activity.id = xtext_all_data...2.)
 
 
@@ -46,10 +47,10 @@ xtext_mean_std <- rename(xtext_mean_std, activity.name = activity.id)
 
 
 ## create a second subset
-## grouping xtext_mean_data by subject.id and activity.name
+        ## grouping xtext_mean_data by subject.id and activity.name
 by_subject_activity <- group_by(xtext_mean_std, subject.id, activity.name)
 
-## summarise_each to calculate the means across all the columns
+        ## summarise_each to calculate the means across all the columns
 final_data_subset <- by_subject_activity %>% summarise_each(funs(mean))
 
 ##write the above data_subset to a text file
