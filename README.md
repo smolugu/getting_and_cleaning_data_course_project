@@ -17,7 +17,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 * CodeBook.md : It describes the variables, the data, and any transformations or work that was performed to clean up the data and perform analysis
 
-* run_analysis.R : It contains the script which cleans up the raw data and prepares the data to calculate mean and standard deviations.
+* run_analysis.R : It contains the script which cleans up the raw data and prepares the data to calculate mean and standard deviations
 
 ### Steps to follow to replicate the data clean up and perform analysis
 
@@ -26,4 +26,5 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 * A subset from above data set is created which contains only the measurements on the mean and standard deviation for each measurement
 * The labels are then created or modified to be more descriptive and valid as per R conventions
 * The data is then grouped by each subject and activities performed by them
+* Finally a data set is created which contains the average of variables corresponding to mean and standard deviation of each subject and activity
 * The script requires "dplyr" package installed in RStudio. Additional packages might be required as per the version of RStudio on your local machine
