@@ -1,10 +1,10 @@
 ## read files to merge
-##test files
+## read test files
 xtext_test <- read.table("./test/X_test.txt",header = FALSE, sep = "", fill = TRUE)
 ytext_test <- read.table("./test/y_test.txt",header = FALSE, sep = "", fill = TRUE)
 ytext_test_subject <- read.table("./test/subject_test.txt",header = FALSE, sep = "", fill = TRUE)
 
-##train files
+## read train files
 xtext_train <- read.table("./train/X_train.txt",header = FALSE, sep = "", fill = TRUE)
 ytext_train <- read.table("./train/y_train.txt",header = FALSE, sep = "", fill = TRUE)
 ytext_train_subject <- read.table("./train/subject_train.txt",header = FALSE, sep = "", fill = TRUE)
