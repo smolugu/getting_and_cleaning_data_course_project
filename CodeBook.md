@@ -94,8 +94,10 @@ The tidy data set created using the script file contains the following variables
 67. fBodyBodyGyroJerkMag.mean.. - Mean of the three-dimensional body angular velocity gyro jerk signals calculated using the Euclidean norm and after applying Fast Fourier Transform (FFT) to the signal
 68. fBodyBodyGyroJerkMag.std.. - Standard deviation of the three-dimensional body angular velocity gyro jerk signals calculated using the Euclidean norm and after applying Fast Fourier Transform (FFT) to the signal
 
+
 ### Transformations on Data
 1. A subset data is created from the whole data set to capture only the measurements on the mean and standard deviations for each measurement.
 2. The second column in the tidy data set is created by replacing the activity id's with activity names as mentioned in the activity_labels.txt file
 3. The mean and standard deviations of the above variables calculated over multiple observations are averaged by grouping subjects with each activity
+
 
