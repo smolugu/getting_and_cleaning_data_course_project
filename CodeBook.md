@@ -24,6 +24,7 @@ These signals were used to estimate variables of the feature vector for each pat
 
 ### Description of variables
 The tidy data set created using the script file contains the following variables:
+
 1. "subject.id" - The id of volunteers from whom the data is collected
 2. "activity.name" - This field contains 6 levels of values which are the names of the activities each person performed. These are namely WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING
 3. tBodyAcc.mean...X - Mean of the body acceleration signal recorded in X direction
