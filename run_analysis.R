@@ -50,7 +50,7 @@ xtext_mean_std <- rename(xtext_mean_std, activity.name = activity.id)
         ## grouping xtext_mean_data by subject.id and activity.name
 by_subject_activity <- group_by(xtext_mean_std, subject.id, activity.name)
 
-        ## summarise_each to calculate the means across all the columns
+        ## use summarise_each to calculate the means across all the columns
 final_data_subset <- by_subject_activity %>% summarise_each(funs(mean))
 
 ##write the above data_subset to a text file
