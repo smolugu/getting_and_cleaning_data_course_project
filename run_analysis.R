@@ -19,10 +19,9 @@ xtext_all_data <- rbind(xtext_test2, xtext_train2)
 write.csv(xtext_all_data, file = "xcsv_all_data.csv")
 
 ## extract measurements of mean and sd
+##naming the columns of the merged data
 feature_text <- read.table("features.txt", sep = "", header = FALSE, fill = TRUE)
 feature_text$V2 <- as.character(feature_text$V2)
-
-        ##naming the columns of the merged data
 names(xtext_all_data) <- c("subject-id", "activity-id",feature_text$V2)
 
         ##creating a subset of mean and SD's by matcing phrases (mean() and sd()) in column names
